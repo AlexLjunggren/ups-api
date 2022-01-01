@@ -1,0 +1,232 @@
+{
+	"trackResponse" : {
+		"shipment" : [{
+				"package" : [{
+						"trackingNumber" : "7798339175",
+						"deliveryDate" : [{
+								"type" : "DEL",
+								"date" : "20191003"
+							}
+						],
+						"deliveryTime" : {
+							"startTime" : "",
+							"endTime" : "112200",
+							"type" : "DEL"
+						},
+						"activity" : [{
+								"location" : {
+									"address" : {
+										"city" : "Goteborg",
+										"stateProvince" : "O",
+										"country" : "SE"
+									}
+								},
+								"status" : {
+									"description" : "Delivered",
+									"code" : "012"
+								},
+								"date" : "20191003",
+								"time" : "112200"
+							}, {
+								"location" : {
+									"address" : {
+										"city" : "Goteborg",
+										"stateProvince" : "O",
+										"country" : "SE"
+									}
+								},
+								"status" : {
+									"type" : "",
+									"description" : "Arrived at Destination Country",
+									"code" : "031"
+								},
+								"date" : "20191003",
+								"time" : "112128"
+							}, {
+								"location" : {
+									"address" : {
+										"city" : "Goteborg",
+										"stateProvince" : "O",
+										"country" : "SE"
+									}
+								},
+								"status" : {
+									"type" : "",
+									"description" : "Documents to client's broker or consignee",
+									"code" : "041"
+								},
+								"date" : "20191003",
+								"time" : "111800"
+							}, {
+								"location" : {
+									"address" : {
+										"city" : "Goteborg",
+										"stateProvince" : "O",
+										"country" : "SE"
+									}
+								},
+								"status" : {
+									"type" : "",
+									"description" : "ETA at Port of Discharge",
+									"code" : "006"
+								},
+								"date" : "20191003",
+								"time" : "063400"
+							}, {
+								"location" : {
+									"address" : {
+										"city" : "Goteborg",
+										"stateProvince" : "O",
+										"country" : "SE"
+									}
+								},
+								"status" : {
+									"type" : "",
+									"description" : "Confirmed Arrival at Final Carrier B/L Point",
+									"code" : "040"
+								},
+								"date" : "20191003",
+								"time" : "063400"
+							}, {
+								"location" : {
+									"address" : {
+										"city" : "Goteborg",
+										"stateProvince" : "O",
+										"country" : "SE"
+									}
+								},
+								"status" : {
+									"type" : "",
+									"description" : "Confirmed Arrival",
+									"code" : "007"
+								},
+								"date" : "20191003",
+								"time" : "063400"
+							}, {
+								"location" : {
+									"address" : {
+										"city" : "Rotterdam",
+										"stateProvince" : "",
+										"country" : "NL"
+									}
+								},
+								"status" : {
+									"type" : "",
+									"description" : "Departure",
+									"code" : "005"
+								},
+								"date" : "20190929",
+								"time" : "190000"
+							}, {
+								"location" : {
+									"address" : {
+										"city" : "New York",
+										"stateProvince" : "NY",
+										"country" : "US"
+									}
+								},
+								"status" : {
+									"type" : "",
+									"description" : "ETD from Load Port",
+									"code" : "004"
+								},
+								"date" : "20190914",
+								"time" : "120000"
+							}, {
+								"location" : {
+									"address" : {
+										"city" : "Newark",
+										"stateProvince" : "NJ",
+										"country" : "US"
+									}
+								},
+								"status" : {
+									"type" : "",
+									"description" : "Documents received from shipper",
+									"code" : "045"
+								},
+								"date" : "20190909",
+								"time" : "111915"
+							}, {
+								"location" : {
+									"address" : {
+										"city" : "Newark",
+										"stateProvince" : "NJ",
+										"country" : "US"
+									}
+								},
+								"status" : {
+									"type" : "",
+									"description" : "Date Available to Ship",
+									"code" : "003"
+								},
+								"date" : "20190909",
+								"time" : "111915"
+							}, {
+								"location" : {
+									"address" : {
+										"city" : "Newark",
+										"stateProvince" : "NJ",
+										"country" : "US"
+									}
+								},
+								"status" : {
+									"type" : "",
+									"description" : "Held at customs",
+									"code" : "A3"
+								},
+								"date" : "20190909",
+								"time" : "110101"
+							}, {
+								"location" : {
+									"address" : {
+										"city" : "Newark",
+										"stateProvince" : "NJ",
+										"country" : "US"
+									}
+								},
+								"status" : {
+									"type" : "",
+									"description" : "Planned pickup date",
+									"code" : "072"
+								},
+								"date" : "20190906",
+								"time" : "000100"
+							}, {
+								"location" : {
+									"address" : {
+										"city" : "Newark",
+										"stateProvince" : "NJ",
+										"country" : "US"
+									}
+								},
+								"status" : {
+									"type" : "",
+									"description" : "Received into UPS possession",
+									"code" : "002"
+								},
+								"date" : "20190906",
+								"time" : "000100"
+							}, {
+								"location" : {
+									"address" : {
+										"city" : "Newark",
+										"stateProvince" : "NJ",
+										"country" : "US"
+									}
+								},
+								"status" : {
+									"type" : "",
+									"description" : "Booking Received from Client",
+									"code" : "037"
+								},
+								"date" : "20190829",
+								"time" : "202645"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}
