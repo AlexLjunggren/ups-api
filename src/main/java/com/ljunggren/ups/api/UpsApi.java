@@ -59,13 +59,13 @@ public class UpsApi {
             get.setHeaders(headers);
             CloseableHttpResponse httpResponse = httpClient.execute(get);
             int responseCode = httpResponse.getStatusLine().getStatusCode();
-            String json = getResult(httpResponse);
             if (KNOWN_REQUEST_CODES.contains(responseCode)) {
+                String json = getResult(httpResponse);
                 UpsResponse response = parse(json, UpsResponse.class);
                 return response;
             }
             return generateErrorReponse("Tracking Error", String.format("Unknown response code %d", responseCode));
-        } catch(Exception e) {
+        } catch (Exception e) {
             return generateErrorReponse("Tracking Error", e.getMessage());
         }
     }
