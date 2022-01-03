@@ -1,6 +1,6 @@
 ## UPS API Tools ##
 
-**Note:** Register for API keu here: https://www.ups.com/upsdeveloperkit
+**Note:** Register for API key here: https://www.ups.com/upsdeveloperkit
 
 ## Instantiate ##
 
