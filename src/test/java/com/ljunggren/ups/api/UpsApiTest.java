@@ -55,8 +55,8 @@ public class UpsApiTest {
         String json = readFromResources("/trackingResponse.json");
         setup(json, 200);
         UpsEnvironment environment = UpsEnvironment.CIE;
-        UpsApi upsApi = new UpsApi(environment, "username", "password", "accessKey", httpClient);
-        UpsResponse upsResponse = upsApi.track("12345");
+        UpsApi upsApi = new UpsApi(environment, "username", "password", "accessKey");
+        UpsResponse upsResponse = upsApi.track("12345", httpClient);
         assertNotNull(upsResponse.getTrackingResponse());
         assertNull(upsResponse.getResponse());
     }
@@ -66,8 +66,8 @@ public class UpsApiTest {
         String json = "notRealResponse";
         setup(json, 407);
         UpsEnvironment environment = UpsEnvironment.CIE;
-        UpsApi upsApi = new UpsApi(environment, "username", "password", "accessKey", httpClient);
-        UpsResponse upsResponse = upsApi.track("12345");
+        UpsApi upsApi = new UpsApi(environment, "username", "password", "accessKey");
+        UpsResponse upsResponse = upsApi.track("12345", httpClient);
         assertNull(upsResponse.getTrackingResponse());
         assertEquals("Unknown response code 407", upsResponse.getResponse().getErrors().get(0).getMessage());
     }
@@ -77,8 +77,8 @@ public class UpsApiTest {
         String json = "notRealResponse";
         setup(json, 200);
         UpsEnvironment environment = UpsEnvironment.CIE;
-        UpsApi upsApi = new UpsApi(environment, "username", "password", "accessKey", httpClient);
-        UpsResponse upsResponse = upsApi.track("12345");
+        UpsApi upsApi = new UpsApi(environment, "username", "password", "accessKey");
+        UpsResponse upsResponse = upsApi.track("12345", httpClient);
         assertNull(upsResponse.getTrackingResponse());
         assertEquals("Unable to parse response", upsResponse.getResponse().getErrors().get(0).getMessage());
     }

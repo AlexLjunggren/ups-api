@@ -26,17 +26,10 @@ public class UpsApi {
     private String password;
     private String accessKey;
     private UpsProperties properties;
-    private CloseableHttpClient httpClient = HttpClients.custom().build();
     
     public static final List<Integer> KNOWN_REQUEST_CODES = Arrays.asList(new Integer[] {
             200, 400, 401, 404, 405, 500, 503
     });
-    
-    // package private for unit testing
-    UpsApi(UpsEnvironment environment, String username, String password, String accessKey, CloseableHttpClient httpClient) {
-        this(environment, username, password, accessKey);
-        this.httpClient = httpClient;
-    }
     
     public UpsApi(UpsEnvironment environment, String username, String password, String accessKey) {
         this.username = username;
@@ -45,7 +38,12 @@ public class UpsApi {
         this.properties = new UpsProperties(environment);
     }
     
-    public UpsResponse track(String trackingNumber) {
+    public UpsResponse track(String trackingNumber) throws IOException {
+        return track(trackingNumber, HttpClients.createDefault());
+    }
+    
+    // package private for unit testing
+    UpsResponse track(String trackingNumber, CloseableHttpClient httpClient) throws IOException {
         String url = properties.getTrackingUrl().replace("{inquiryNumber}", trackingNumber);
         HttpGet get = new HttpGet(url);
         Header[] headers = new Header[] {
@@ -67,6 +65,8 @@ public class UpsApi {
             return generateErrorReponse("Tracking Error", String.format("Unknown response code %d", responseCode));
         } catch (Exception e) {
             return generateErrorReponse("Tracking Error", e.getMessage());
+        } finally {
+            httpClient.close();
         }
     }
     
