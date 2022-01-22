@@ -1,13 +1,13 @@
-package com.ljunggren.ups.api;
+package io.ljunggren.ups.api;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 
-import com.ljunggren.jsonUtils.JsonUtils;
+import io.ljunggren.jsonUtils.JsonUtils;
 
 public class UpsResponseTest {
 

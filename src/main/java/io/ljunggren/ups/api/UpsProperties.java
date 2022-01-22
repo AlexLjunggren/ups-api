@@ -1,4 +1,4 @@
-package com.ljunggren.ups.api;
+package io.ljunggren.ups.api;
 
 import java.io.IOException;
 import java.io.InputStream;
