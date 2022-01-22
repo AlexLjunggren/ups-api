@@ -1,4 +1,4 @@
-package com.ljunggren.ups.api;
+package io.ljunggren.ups.api;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

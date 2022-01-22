@@ -1,4 +1,4 @@
-package com.ljunggren.ups.api.tracking.response;
+package io.ljunggren.ups.api.tracking.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -10,9 +10,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class DeliveryDate {
+public class Location {
 
-    private String type;
-    private String date;
+    private Address address;
     
 }

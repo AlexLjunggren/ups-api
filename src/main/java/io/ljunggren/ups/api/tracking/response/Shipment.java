@@ -1,9 +1,11 @@
-package com.ljunggren.ups.api.tracking.response;
+package io.ljunggren.ups.api.tracking.response;
 
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,13 +15,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Package {
+@JsonInclude(Include.NON_NULL)
+public class Shipment {
 
-    private String trackingNumber;
-    @JsonProperty("deliveryDate")
-    private List<DeliveryDate> deliveryDates;
-    private DeliveryTime deliveryTime;
-    @JsonProperty("activity")
-    private List<Activity> activities;
+    @JsonProperty("package")
+    private List<Package> packages;
+    private List<MessageCode> warnings;
     
 }

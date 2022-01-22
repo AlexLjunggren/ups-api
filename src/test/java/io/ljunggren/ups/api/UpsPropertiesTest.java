@@ -1,6 +1,6 @@
-package com.ljunggren.ups.api;
+package io.ljunggren.ups.api;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 

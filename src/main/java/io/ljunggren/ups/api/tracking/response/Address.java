@@ -1,4 +1,4 @@
-package com.ljunggren.ups.api.tracking.response;
+package io.ljunggren.ups.api.tracking.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;

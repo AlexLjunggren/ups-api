@@ -1,4 +1,4 @@
-package com.ljunggren.ups.api;
+package io.ljunggren.ups.api;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,9 +16,10 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicHeader;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.ljunggren.jsonUtils.JsonUtils;
-import com.ljunggren.ups.api.tracking.response.MessageCode;
-import com.ljunggren.ups.api.tracking.response.Response;
+
+import io.ljunggren.jsonUtils.JsonUtils;
+import io.ljunggren.ups.api.tracking.response.MessageCode;
+import io.ljunggren.ups.api.tracking.response.Response;
 
 public class UpsApi {
 

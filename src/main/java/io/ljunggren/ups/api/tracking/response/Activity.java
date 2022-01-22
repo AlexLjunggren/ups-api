@@ -1,4 +1,4 @@
-package com.ljunggren.ups.api.tracking.response;
+package io.ljunggren.ups.api.tracking.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -10,9 +10,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class MessageCode {
+public class Activity {
 
-    private String code;
-    private String message;
+    private Location location;
+    private Status status;
+    private String date;
+    private String time;
     
 }
