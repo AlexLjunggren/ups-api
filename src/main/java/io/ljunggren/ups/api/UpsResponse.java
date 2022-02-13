@@ -22,6 +22,7 @@ public class UpsResponse {
 
     @JsonProperty("trackResponse")
     private TrackingResponse trackingResponse;
-    private Response response;
+    @JsonProperty("response")
+    private Response errorResponse;
     
 }

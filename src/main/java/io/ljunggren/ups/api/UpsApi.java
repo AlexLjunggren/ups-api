@@ -74,7 +74,7 @@ public class UpsApi {
     private UpsResponse generateErrorReponse(String code, String message) {
         UpsResponse upsResponse = new UpsResponse();
         Response response = new Response().addError(new MessageCode(code, message));
-        upsResponse.setResponse(response);
+        upsResponse.setErrorResponse(response);
         return upsResponse;
     }
     

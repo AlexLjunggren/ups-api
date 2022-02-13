@@ -58,7 +58,7 @@ public class UpsApiTest {
         UpsApi upsApi = new UpsApi(environment, "username", "password", "accessKey");
         UpsResponse upsResponse = upsApi.track("12345", httpClient);
         assertNotNull(upsResponse.getTrackingResponse());
-        assertNull(upsResponse.getResponse());
+        assertNull(upsResponse.getErrorResponse());
     }
     
     @Test
@@ -69,7 +69,7 @@ public class UpsApiTest {
         UpsApi upsApi = new UpsApi(environment, "username", "password", "accessKey");
         UpsResponse upsResponse = upsApi.track("12345", httpClient);
         assertNull(upsResponse.getTrackingResponse());
-        assertEquals("Unknown response code 407", upsResponse.getResponse().getErrors().get(0).getMessage());
+        assertEquals("Unknown response code 407", upsResponse.getErrorResponse().getErrors().get(0).getMessage());
     }
     
     @Test
@@ -80,7 +80,7 @@ public class UpsApiTest {
         UpsApi upsApi = new UpsApi(environment, "username", "password", "accessKey");
         UpsResponse upsResponse = upsApi.track("12345", httpClient);
         assertNull(upsResponse.getTrackingResponse());
-        assertEquals("Unable to parse response", upsResponse.getResponse().getErrors().get(0).getMessage());
+        assertEquals("Unable to parse response", upsResponse.getErrorResponse().getErrors().get(0).getMessage());
     }
     
 }
