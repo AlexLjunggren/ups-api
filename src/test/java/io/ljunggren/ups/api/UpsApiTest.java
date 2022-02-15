@@ -3,7 +3,6 @@ package io.ljunggren.ups.api;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
-import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
 
 import java.io.ByteArrayInputStream;
@@ -20,7 +19,8 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
 public class UpsApiTest {
@@ -43,7 +43,7 @@ public class UpsApiTest {
 
     private void setup(String json, int responseCode) throws ClientProtocolException, IOException {
         InputStream content = new ByteArrayInputStream(json.getBytes());
-        when(httpClient.execute(any(HttpGet.class))).thenReturn(httpResponse);
+        when(httpClient.execute(Mockito.any(HttpGet.class))).thenReturn(httpResponse);
         when(httpResponse.getStatusLine()).thenReturn(statusLine);
         when(statusLine.getStatusCode()).thenReturn(responseCode);
         when(httpResponse.getEntity()).thenReturn(httpEntity);
