@@ -1,4 +1,4 @@
-package io.ljunggren.ups.api.tracking.response;
+package io.ljunggren.ups.api.model.tracking.response;
 
 import java.util.List;
 
@@ -20,6 +20,9 @@ public class Shipment {
 
     @JsonProperty("package")
     private List<Package> packages;
+    @JsonProperty("inquiryNumber")
+    private String trackingNumber;
+    @JsonProperty("warnings")
     private List<MessageCode> warnings;
     
 }

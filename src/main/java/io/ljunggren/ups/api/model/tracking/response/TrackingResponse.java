@@ -1,4 +1,4 @@
-package io.ljunggren.ups.api.tracking.response;
+package io.ljunggren.ups.api.model.tracking.response;
 
 import java.util.List;
 

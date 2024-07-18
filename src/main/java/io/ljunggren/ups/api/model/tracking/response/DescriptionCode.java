@@ -10,8 +10,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Location {
-
-    private Address address;
+public class DescriptionCode {
     
+    private String description;
+    private String code;
+
 }

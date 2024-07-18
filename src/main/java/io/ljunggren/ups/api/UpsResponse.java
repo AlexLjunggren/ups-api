@@ -4,8 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
-import io.ljunggren.ups.api.tracking.response.Response;
-import io.ljunggren.ups.api.tracking.response.TrackingResponse;
+import io.ljunggren.ups.api.model.tracking.response.Response;
+import io.ljunggren.ups.api.model.tracking.response.TrackingResponse;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

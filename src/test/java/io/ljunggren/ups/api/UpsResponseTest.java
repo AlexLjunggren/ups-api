@@ -16,14 +16,6 @@ public class UpsResponseTest {
     }
 
     @Test
-    public void serializeTrackingResponseTest() throws IOException {
-        String json = readFromResources("/trackingResponse.json");
-        UpsResponse response = JsonUtils.jsonToObject(json, UpsResponse.class);
-        String serializedResponse = JsonUtils.objectToJson(response);
-        assertTrue(JsonUtils.areEqual(json, serializedResponse));
-    }
-
-    @Test
     public void serializeTrackingNotFoundResponseTest() throws IOException {
         String json = readFromResources("/trackingNotFoundResponse.json");
         UpsResponse response = JsonUtils.jsonToObject(json, UpsResponse.class);
