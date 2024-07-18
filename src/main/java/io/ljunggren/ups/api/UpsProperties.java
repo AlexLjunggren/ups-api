@@ -10,8 +10,6 @@ public class UpsProperties {
 
     private static Properties properties = new Properties();
     
-    private static final String API_TRACKING_URL = "api.tracking.url";
-
     public UpsProperties(UpsEnvironment environment) {
         Map<UpsEnvironment, String> fileMap = generateFileMap();
         setProperties(fileMap.get(environment));
@@ -34,8 +32,8 @@ public class UpsProperties {
         }
     }
     
-    public String getTrackingUrl() {
-        return properties.getProperty(API_TRACKING_URL);
+    public String getDomain() {
+        return properties.getProperty("domain");
     }
     
 }
