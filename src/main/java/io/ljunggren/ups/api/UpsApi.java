@@ -37,7 +37,6 @@ public class UpsApi {
         if (!isValid(trackingNumber)) {
             return null;
         }
-        
         String bearerToken = authToken.getAccessToken();
         return trackingService.track(trackingNumber, bearerToken);
     }

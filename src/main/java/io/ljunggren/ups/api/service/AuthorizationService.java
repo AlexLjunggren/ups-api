@@ -19,16 +19,16 @@ import io.ljunggren.ups.api.tracking.util.HttpUtils;
 
 public class AuthorizationService {
 
-    private UpsProperties upsProperties;
+    private UpsProperties properties;
     
     public AuthorizationService(UpsProperties upsProperties) {
-        this.upsProperties = upsProperties;
+        this.properties = upsProperties;
     }
 
     public AuthToken getAuthToken(String clientId, String clientSecret, String accountNumber) throws Exception {
         Header[] headers = generateHeaders(clientId, clientSecret, accountNumber);
         StringEntity entity = generateAuthEntity();
-        String json = HttpUtils.post(upsProperties.getDomain() + "/security/v1/oauth/token", headers, entity);
+        String json = HttpUtils.post(properties.getDomain() + "/security/v1/oauth/token", headers, entity);
         return JsonUtils.jsonToObject(json, AuthToken.class);
     }
     

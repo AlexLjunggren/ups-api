@@ -12,15 +12,15 @@ import io.ljunggren.ups.api.tracking.util.HttpUtils;
 
 public class TrackingService {
     
-    private UpsProperties upsProperties;
+    private UpsProperties properties;
     
     public TrackingService(UpsProperties upsProperties) {
-        this.upsProperties = upsProperties;
+        this.properties = upsProperties;
     }
 
     public UpsResponse track(String trackingNumber, String bearerToken) throws Exception {
         Header[] headers = generateHeaders(bearerToken);
-        String json = HttpUtils.get(upsProperties.getDomain() + "/api/track/v1/details/" + trackingNumber, headers);
+        String json = HttpUtils.get(properties.getDomain() + "/api/track/v1/details/" + trackingNumber, headers);
         return JsonUtils.jsonToObject(json, UpsResponse.class);
     }
 
