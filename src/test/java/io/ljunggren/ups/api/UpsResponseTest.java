@@ -7,7 +7,7 @@ import java.io.IOException;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 
-import io.ljunggren.jsonUtils.JsonUtils;
+import io.ljunggren.json.utils.JsonUtils;
 
 public class UpsResponseTest {
 

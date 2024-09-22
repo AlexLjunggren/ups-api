@@ -12,7 +12,7 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
 
-import io.ljunggren.jsonUtils.JsonUtils;
+import io.ljunggren.json.utils.JsonUtils;
 import io.ljunggren.ups.api.UpsProperties;
 import io.ljunggren.ups.api.model.AuthToken;
 import io.ljunggren.ups.api.tracking.util.HttpUtils;

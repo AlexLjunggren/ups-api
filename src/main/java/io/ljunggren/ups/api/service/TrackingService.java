@@ -5,7 +5,7 @@ import java.io.UnsupportedEncodingException;
 import org.apache.http.Header;
 import org.apache.http.message.BasicHeader;
 
-import io.ljunggren.jsonUtils.JsonUtils;
+import io.ljunggren.json.utils.JsonUtils;
 import io.ljunggren.ups.api.UpsProperties;
 import io.ljunggren.ups.api.UpsResponse;
 import io.ljunggren.ups.api.tracking.util.HttpUtils;
